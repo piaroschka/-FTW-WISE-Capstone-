@@ -1,0 +1,12 @@
+clickhouse_ftw:
+  target: remote
+  outputs:
+    remote:
+      type: clickhouse
+      host: 54.87.106.52
+      port: 8123
+      user: ftw_grp2
+      password: Char!004_FTW
+      schema: clean_grp2
+      threads: 4
+      secure: false

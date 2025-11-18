@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_2019_social_media_penetration
+    description: "Staging table for 2019 social media penetration data"
+    columns:
+      - name: id
+        description: "Unique identifier"
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: region
+        description: "Geographic region"
+        data_tests:
+          - not_null
+      
+      - name: name
+        description: "Country or territory name"
+        data_tests:
+          - not_null
+      
+      - name: total_socmed_users
+        description: "Total number of social media users"
+        data_tests:
+          - not_null
+      
+      - name: total_regional_respondents
+        description: "Total number of regional respondents"
+        data_tests:
+          - not_null
+      
+      - name: percent_socmed_users
+        description: "Percentage of social media users (0-100)"
+        data_tests:
+          - not_null

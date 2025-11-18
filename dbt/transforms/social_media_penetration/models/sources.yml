@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: raw
+    database: raw_grp2             
+    tables:
+      - name: social_media_penetration
