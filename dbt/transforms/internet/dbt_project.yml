@@ -1,0 +1,16 @@
+name: "ex_internet"
+version: "1.0"
+config-version: 2
+
+profile: clickhouse_ftw
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  ex_internet:
+    clean:
+      +schema: clean_grp2
+      +materialized: table
+    mart:
+      +schema: mart_grp2
+      +materialized: view

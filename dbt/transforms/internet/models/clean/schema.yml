@@ -1,0 +1,35 @@
+models:
+  - name: stg_fact_internet
+    columns:
+      - name: reg
+        tests: [not_null]
+      - name: prv
+        tests: [not_null]
+      - name: mun
+        tests: [not_null]
+      - name: hsn
+        tests: [not_null]
+      - name: h16_a
+        tests: [not_null]
+      - name: h16_b
+        tests: [not_null]
+      - name: h16_c
+        tests: [not_null]
+      - name: h16_d
+        tests: [not_null]
+
+  - name: stg_internet_2020
+    columns:
+      - name: id
+        tests: [not_null]
+      - name: region
+        tests: [not_null]
+      - name: name
+        tests: [not_null]
+      - name: province
+        tests: [not_null]
+      - name: municipality
+        tests: [not_null]
+      - name: internet
+        tests:
+          - accepted_values: { values: [1, 0] }

@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: raw_grp2
+    database: raw_grp2 # Explicitly specify ClickHouse database
+    tables:
+      - name: psa_census_2020_f3___all_regions
+      - name: social_media_penetration
+  - name: clean_grp2
+    database: clean_grp2
+    tables:
+      - name: stg_dim_geography
+      - name: stg_dim_region
+      - name: stg_fact_internet
+      - name: stg_internet_2020
+      - name: stg_2019_social_media_penetration
+  - name: mart_grp2
+    database: mart_grp2
+    tables:
+      - name: Input_Data
