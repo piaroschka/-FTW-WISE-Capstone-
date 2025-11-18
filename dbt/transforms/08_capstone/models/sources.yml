@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw
+    database: raw
+    tables:
+      - name: first_second_class_municipalities
+        description: CMCI 2022 data for 1st and 2nd class municipalities
+      - name: third_fourth_class_municipalities
+        description: CMCI 2022 data for 3rd and 4th class municipalities
+      - name: component_cities
+        description: CMCI 2022 data for component cities
+      - name: highly_urbanized_cities
+        description: CMCI 2022 data for highly urbanized cities
+
+  - name: clean
+    database: clean
+    tables:
+      - name: stg_competitiveness_score
+        description: Cleaned and combined competitiveness score data from all 4 CMCI CSV files
+
+  - name: mart
+    database: mart
+    tables:
+      - name: Fact_Competitiveness_score
+        description: Fact table with competitiveness scores joined with regional and voter data
